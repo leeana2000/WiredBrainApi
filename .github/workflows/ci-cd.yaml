@@ -40,7 +40,7 @@ jobs:
         hide_complexity: true
         indicators: true
         output: console
-        token: ***
+        token: ${{ secrets.CODE_COV_TOKEN }}
     list-files: none
     initial-fetch-depth: 100
   env:

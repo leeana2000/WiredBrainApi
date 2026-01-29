@@ -29,9 +29,9 @@ jobs:
       name: Test
       run: dotnet test "WiredBrain.Tests/WiredBrain.Tests.csproj" --collect "XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencoverage
 
-    - id: Coverage
+    - id: coverage
       name: Code Coverage Report
-      uses: irongut/CodeCoverageSummary@v1.3.0
+      uses: irongut/CodeCoverageReport@v2
       with:
         filename: WiredBrain.Tests/TestResults/**/coverage.cobertura.xml
         badge: false

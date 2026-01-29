@@ -33,7 +33,7 @@ jobs:
       name: Code Coverage Report
       uses: dorny/paths-filter@v2
       with:
-      filters: ${{ env.filters }}
+        filters: ${{ env.filters }}
         filename: WiredBrain.Tests/TestResults/**/coverage.cobertura.xml
         badge: false
         fail_below_min: false

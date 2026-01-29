@@ -31,7 +31,6 @@ jobs:
 
     - id: coverage
       name: Code Coverage Report
-      uses: dorny/paths-filter@v2
       with:
         filename: WiredBrain.Tests/TestResults/**/coverage.cobertura.xml
         badge: false

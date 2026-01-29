@@ -32,3 +32,20 @@ jobs:
     - id: coverage
       name: Code Coverage Report
       uses: dorny/paths-filter@v2
+      with:
+      filters: ${{ env.filters }}
+        filename: WiredBrain.Tests/TestResults/**/coverage.cobertura.xml
+        badge: false
+        fail_below_min: false
+        hide_branch_rate: false
+        hide_complexity: true
+        indicators: true
+        output: console
+        token: ${{ secrets.CODE_COV_TOKEN }}
+        list-files: none
+    initial-fetch-depth: 100
+  env:
+    DOTNET_ROOT: /usr/share/dotnet
+    filters: |
+      coverage:
+        - 'WiredBrain.Tests/**'

@@ -32,12 +32,3 @@ jobs:
     - id: coverage
       name: Code Coverage Report
       uses: dorny/paths-filter@v2
-      with:
-        filename: WiredBrain.Tests/TestResults/**/coverage.cobertura.xml
-        badge: false
-        fail_below_min: false
-        hide_branch_rate: false
-        hide_complexity: true
-        indicators: true
-        output: console
-        token: ${{ secrets.CODE_COV_TOKEN }}

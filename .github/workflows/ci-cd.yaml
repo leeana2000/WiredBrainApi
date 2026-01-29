@@ -41,7 +41,3 @@ jobs:
         indicators: true
         output: console
         token: ${{ secrets.CODE_COV_TOKEN }}
-    list-files: none
-    initial-fetch-depth: 100
-  env:
-    DOTNET_ROOT: /usr/share/dotnet

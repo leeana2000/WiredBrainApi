@@ -31,6 +31,7 @@ jobs:
 
     - id: coverage
       name: Code Coverage Report
+      uses: dorny/paths-filter@v2
       with:
         filename: WiredBrain.Tests/TestResults/**/coverage.cobertura.xml
         badge: false
@@ -39,3 +40,8 @@ jobs:
         hide_complexity: true
         indicators: true
         output: console
+        token: ***
+    list-files: none
+    initial-fetch-depth: 100
+  env:
+    DOTNET_ROOT: /usr/share/dotnet
